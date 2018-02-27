@@ -1,0 +1,177 @@
+.progress-c{
+    width: 150px;
+    height: 150px;
+    line-height: 150px;
+    background: none;
+    margin: 0 auto;
+    box-shadow: none;
+    position: relative;
+}
+.progress-c:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.progress-c > span{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+.progress-c .progress-left{
+    left: 0;
+}
+.progress-c .progress-bar-c{
+    width: 100%;
+    height: 100%;
+    background: none;
+    border-width: 10px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.progress-c .progress-left .progress-bar-c{
+    left: 100%;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-left: 0;
+    -webkit-transform-origin: center left;
+    transform-origin: center left;
+}
+.progress-c .progress-right{
+    right: 0;
+}
+.progress-c .progress-right .progress-bar-c{
+    left: -100%;
+    border-top-left-radius: 80px;
+    border-bottom-left-radius: 80px;
+    border-right: 0;
+    -webkit-transform-origin: center right;
+    transform-origin: center right;
+    animation: loading-1 1.8s linear forwards;
+}
+.progress-c .progress-value{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 40px;
+    color: #333333;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 135px;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+.progress-c.css .progress-bar-c{
+    border-color: #AF8652;
+}
+.progress-c.css .progress-left .progress-bar-c{
+    animation: loading-2 1s linear forwards 1.8s;
+}
+
+.progress-c.bootstrap .progress-bar-c{
+    border-color: #AF8652;
+}
+.progress-c.bootstrap .progress-left .progress-bar-c{
+    animation: loading-3 1s linear forwards 1.8s;
+}
+
+.progress-c.jquery .progress-bar-c{
+    border-color: #AF8652;
+}
+.progress-c.jquery .progress-left .progress-bar-c{
+    animation: loading-4 1s linear forwards 1.8s;
+}
+
+.progress-c.ps .progress-bar-c{
+    border-color: #AF8652;
+}
+.progress-c.ps .progress-left .progress-bar-c{
+    animation: loading-5 1s linear forwards 1.8s;
+}
+@keyframes loading-1{
+    0%{
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -o-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+@keyframes loading-2{
+    0%{
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -o-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes loading-3{
+    0%{
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -o-transform: rotate(150deg);
+        -moz-transform: rotate(1560deg);
+        -webkit-transform: rotate(150deg);
+        transform: rotate(150deg);
+    }
+}
+
+@keyframes loading-4{
+    0%{
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -o-transform: rotate(130deg);
+        -moz-transform: rotate(130deg);
+        -webkit-transform: rotate(130deg);
+        transform: rotate(130deg);
+    }
+}
+
+@keyframes loading-5{
+    0%{
+        -o-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100%{
+        -o-transform: rotate(50deg);
+        -moz-transform: rotate(50deg);
+        -webkit-transform: rotate(50deg);
+        transform: rotate(50deg);
+    }
+}
+
+@media only screen and (max-width: 990px){
+    .progress{ margin-bottom: 20px; }
+}
